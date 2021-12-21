@@ -1,0 +1,465 @@
+<div style="text-align: left">
+        <span class="redHD">Event Requisition<br />
+            <br />
+        </span>
+        <table cellpadding="1" cellspacing="1" style="width: 770px; height: 70px;">
+            <tr>
+                <td style="border: 1px solid #CED0C7;" valign="top">
+                    &nbsp;
+                    <div style="text-align: center">
+                        <table style="width: 94%">
+                        
+                        <td style="width: 15%; text-align: left;" class="h1">
+                                                 Date<span style="color: #ff0000">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <input id="txtStartDt" runat="server" class="inputbx" style="width: 65px" type="text" />
+                                                <img src="../images/icon-appt.gif" onclick="showCalendarControl(ctl00_ContentPlaceHolder1_txtStartDt);"
+                                                    align="middle" />
+                                                <asp:RequiredFieldValidator ID="rfvStartDt" runat="server" ControlToValidate="txtStartDt"
+                                                    Display="None" ErrorMessage="Please enter Event Start Date" SetFocusOnError="True"
+                                                    ValidationGroup="a"></asp:RequiredFieldValidator>
+                                                <asp:CustomValidator ID="cVldStartDate" runat="server" ClientValidationFunction="chkStartDate"
+                                                    ControlToValidate="txtStartDt" Display="None" ErrorMessage="Start date must be greater than or equal to today"
+                                                    ValidationGroup="a" SetFocusOnError="True"></asp:CustomValidator></td>
+                                                    
+                                                    
+                                                    
+                                                         <tr>
+                                                <td class="h1" style="width: 14%; height: 24px">
+                                                    &nbsp; Start Time<span style="color: #cc0000" id="spnStyFrom"></span></td>
+                                                <td class="h1" style="width: 25%; height: 24px">
+                                                    <asp:DropDownList ID="ddlhours1" runat="server" CssClass="inputbx">
+                                                        <asp:ListItem>Hrs</asp:ListItem>
+                                                        <asp:ListItem>00</asp:ListItem>
+                                                        <asp:ListItem>01</asp:ListItem>
+                                                        <asp:ListItem>02</asp:ListItem>
+                                                        <asp:ListItem>03</asp:ListItem>
+                                                        <asp:ListItem>04</asp:ListItem>
+                                                        <asp:ListItem>05</asp:ListItem>
+                                                        <asp:ListItem>06</asp:ListItem>
+                                                        <asp:ListItem>07</asp:ListItem>
+                                                        <asp:ListItem>08</asp:ListItem>
+                                                        <asp:ListItem>09</asp:ListItem>
+                                                        <asp:ListItem>10</asp:ListItem>
+                                                        <asp:ListItem>11</asp:ListItem>
+                                                        <asp:ListItem>12</asp:ListItem>
+                                                        <asp:ListItem>13</asp:ListItem>
+                                                        <asp:ListItem>14</asp:ListItem>
+                                                        <asp:ListItem>15</asp:ListItem>
+                                                        <asp:ListItem>16</asp:ListItem>
+                                                        <asp:ListItem>17</asp:ListItem>
+                                                        <asp:ListItem>18</asp:ListItem>
+                                                        <asp:ListItem>19</asp:ListItem>
+                                                        <asp:ListItem>20</asp:ListItem>
+                                                        <asp:ListItem>21</asp:ListItem>
+                                                        <asp:ListItem>22</asp:ListItem>
+                                                        <asp:ListItem>23</asp:ListItem>
+                                                    </asp:DropDownList><asp:DropDownList ID="ddlminuts1" runat="server" CssClass="inputbx">
+                                                        <asp:ListItem>Mins</asp:ListItem>
+                                                        <asp:ListItem>00</asp:ListItem>
+                                                        <asp:ListItem>05</asp:ListItem>
+                                                        <asp:ListItem>10</asp:ListItem>
+                                                        <asp:ListItem>15</asp:ListItem>
+                                                        <asp:ListItem>20</asp:ListItem>
+                                                        <asp:ListItem>25</asp:ListItem>
+                                                        <asp:ListItem>30</asp:ListItem>
+                                                        <asp:ListItem>35</asp:ListItem>
+                                                        <asp:ListItem>40</asp:ListItem>
+                                                        <asp:ListItem>45</asp:ListItem>
+                                                        <asp:ListItem>50</asp:ListItem>
+                                                        <asp:ListItem>55</asp:ListItem>
+                                                        <asp:ListItem>59</asp:ListItem>
+                                                    </asp:DropDownList></td>
+                                                <td class="h1" style="width: 9%; height: 24px">
+                                                </td>
+                                                <td class="h1" style="width: 12%; height: 24px">
+                                                    End Time <span style="color: #cc0000" id="spnStyTo"></span></td>
+                                                <td class="h1" style="width: 20%;">
+                                                    <asp:DropDownList ID="ddlhours2" runat="server" CssClass="inputbx">
+                                                        <asp:ListItem>Hrs</asp:ListItem>
+                                                        <asp:ListItem>00</asp:ListItem>
+                                                        <asp:ListItem>01</asp:ListItem>
+                                                        <asp:ListItem>02</asp:ListItem>
+                                                        <asp:ListItem>03</asp:ListItem>
+                                                        <asp:ListItem>04</asp:ListItem>
+                                                        <asp:ListItem>05</asp:ListItem>
+                                                        <asp:ListItem>06</asp:ListItem>
+                                                        <asp:ListItem>07</asp:ListItem>
+                                                        <asp:ListItem>08</asp:ListItem>
+                                                        <asp:ListItem>09</asp:ListItem>
+                                                        <asp:ListItem>10</asp:ListItem>
+                                                        <asp:ListItem>11</asp:ListItem>
+                                                        <asp:ListItem>12</asp:ListItem>
+                                                        <asp:ListItem>13</asp:ListItem>
+                                                        <asp:ListItem>14</asp:ListItem>
+                                                        <asp:ListItem>15</asp:ListItem>
+                                                        <asp:ListItem>16</asp:ListItem>
+                                                        <asp:ListItem>17</asp:ListItem>
+                                                        <asp:ListItem>18</asp:ListItem>
+                                                        <asp:ListItem>19</asp:ListItem>
+                                                        <asp:ListItem>20</asp:ListItem>
+                                                        <asp:ListItem>21</asp:ListItem>
+                                                        <asp:ListItem>22</asp:ListItem>
+                                                        <asp:ListItem>23</asp:ListItem>
+                                                    </asp:DropDownList><asp:DropDownList ID="ddlminuts2" runat="server" CssClass="inputbx">
+                                                        <asp:ListItem>Mins</asp:ListItem>
+                                                        <asp:ListItem>00</asp:ListItem>
+                                                        <asp:ListItem>05</asp:ListItem>
+                                                        <asp:ListItem>10</asp:ListItem>
+                                                        <asp:ListItem>15</asp:ListItem>
+                                                        <asp:ListItem>20</asp:ListItem>
+                                                        <asp:ListItem>25</asp:ListItem>
+                                                        <asp:ListItem>30</asp:ListItem>
+                                                        <asp:ListItem>35</asp:ListItem>
+                                                        <asp:ListItem>40</asp:ListItem>
+                                                        <asp:ListItem>45</asp:ListItem>
+                                                        <asp:ListItem>50</asp:ListItem>
+                                                        <asp:ListItem>55</asp:ListItem>
+                                                        <asp:ListItem>59</asp:ListItem>
+                                                    </asp:DropDownList></td>
+                                            </tr>
+											
+											
+											
+											
+											
+											
+											
+											<tr>
+                                            <td style="width: 15%; text-align: left;" class="h1">
+                                                 Title<span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="rfvTitle" runat="server" ControlToValidate="txtTitle"
+                                                    Display="None" ErrorMessage="Please enter Event Title" SetFocusOnError="True"
+                                                    ValidationGroup="a"></asp:RequiredFieldValidator></td>
+													
+													
+													
+												
+											<tr>
+                                            <td style="width: 15%; text-align: left;" class="h1">
+                                                 Participant Expected <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+                                              </tr>  
+												
+												
+												
+												
+												<tr>
+                                            <td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                                Expected From </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="">India</asp:ListItem>
+                                                    <asp:ListItem Value="">Asia Pacific</asp:ListItem>
+													<asp:ListItem Value="">Other Countries</asp:ListItem>
+													
+													
+                                                </asp:RadioButtonList>
+                                            </td>
+													
+													
+													
+													
+													
+													
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                                Is The Webinar For  </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True">Closed Group</asp:ListItem>
+                                                    <asp:ListItem Value="I">Open Group</asp:ListItem>
+													</asp:RadioButtonList>
+                                            </td>
+													</tr>
+													
+													
+													
+													<tr>
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                                Do you require Registration link? :  </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True">YES </asp:ListItem>
+                                                    <asp:ListItem Value="I">NO</asp:ListItem>
+													
+                                                          </asp:RadioButtonList>
+                                                      </td>
+													
+													
+											<div style="text-align: left">
+        <span class="redHD">For Mass email, kindly provide the below details also<br />
+            <br />
+        </span>
+													
+													<tr>
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                               Do you need the mailer to be designed ?  </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True">YES </asp:ListItem>
+                                                    <asp:ListItem Value="I">NO</asp:ListItem>
+													
+													</asp:RadioButtonList>
+                                                      </td>
+													  
+													  
+													  
+													  
+													  
+													  <tr>
+                                            <td style="width: 15%; text-align: left;" class="h1">
+                                                 Database From: <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+												
+											<td style="width: 15%; text-align: left;" class="h1">
+                                            Database size i.e No. of emails
+                                          <span style="color: #ff0000">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+											<asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+                                              </tr> 
+											  
+											  
+											  
+											  <tr>
+											 <td style="width: 15%; text-align: left;" class="h1">
+                                                 Specify the Sectors : <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+												</tr>
+												
+												
+											  
+											  
+											  
+											  	  <tr>
+                                            <td style="width: 15%; text-align: left;" class="h1">
+                                                 Sender’s Name:- <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+												
+											<td style="width: 15%; text-align: left;" class="h1">
+                                            Sender’s Designation: <span style="color: #ff0000">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+											<asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+                                              </tr> 
+											  
+											  
+												
+
+												
+											  <tr>
+											 <td style="width: 15%; text-align: left;" class="h1">
+                                                Reply to Email:
+                                                (for responses)
+                                              <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+												</tr>
+												
+												
+												
+												
+												
+												<tr>
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                               Requirement of social media promotion:  </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True"> Pre Event </asp:ListItem>
+                                                    <asp:ListItem Value="I">Post Event</asp:ListItem>
+													
+													</asp:RadioButtonList>
+                                                      </td>
+													  </tr>
+													  
+													  <div style="text-align: left">
+                                                     <span class="redHD">Please provide social media posts (along with screenshots) to TERI's  CS team<br />
+                                                             <br />
+                                                        </span>
+													  
+													  
+													  <tr>
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                               Do you need a webinar banner?  </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True"> YES </asp:ListItem>
+                                                    <asp:ListItem Value="I">NO</asp:ListItem>
+													 </asp:RadioButtonList>
+                                                      </td>
+													 
+													  </tr>
+													  
+													  
+													  <div style="text-align: left">
+                                                     <span class="redHD">If Yes, provide logos and share the sequence<br />
+                                                             <br />
+                                                        </span>
+														
+														
+													  
+													  <tr>
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                               Would you like to have a demo? </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True"> YES </asp:ListItem>
+                                                    <asp:ListItem Value="I">NO</asp:ListItem>
+													</asp:RadioButtonList>
+													
+													 </tr>
+												
+												
+												
+												
+												
+												<tr>
+                                                <td class="h1" style="width: 12%; height: 24px">
+                                                    Desired Demo Date:  <span style="color: #cc0000" id="spnStyTo"></span></td>
+                                                <td class="h1" style="width: 20%;">
+                                                    <asp:DropDownList ID="ddlhours2" runat="server" CssClass="inputbx">
+                                                        <asp:ListItem>Hrs</asp:ListItem>
+                                                        <asp:ListItem>00</asp:ListItem>
+                                                        <asp:ListItem>01</asp:ListItem>
+                                                        <asp:ListItem>02</asp:ListItem>
+                                                        <asp:ListItem>03</asp:ListItem>
+                                                        <asp:ListItem>04</asp:ListItem>
+                                                        <asp:ListItem>05</asp:ListItem>
+                                                        <asp:ListItem>06</asp:ListItem>
+                                                        <asp:ListItem>07</asp:ListItem>
+                                                        <asp:ListItem>08</asp:ListItem>
+                                                        <asp:ListItem>09</asp:ListItem>
+                                                        <asp:ListItem>10</asp:ListItem>
+                                                        <asp:ListItem>11</asp:ListItem>
+                                                        <asp:ListItem>12</asp:ListItem>
+                                                        <asp:ListItem>13</asp:ListItem>
+                                                        <asp:ListItem>14</asp:ListItem>
+                                                        <asp:ListItem>15</asp:ListItem>
+                                                        <asp:ListItem>16</asp:ListItem>
+                                                        <asp:ListItem>17</asp:ListItem>
+                                                        <asp:ListItem>18</asp:ListItem>
+                                                        <asp:ListItem>19</asp:ListItem>
+                                                        <asp:ListItem>20</asp:ListItem>
+                                                        <asp:ListItem>21</asp:ListItem>
+                                                        <asp:ListItem>22</asp:ListItem>
+                                                        <asp:ListItem>23</asp:ListItem>
+                                                    </asp:DropDownList><asp:DropDownList ID="ddlminuts2" runat="server" CssClass="inputbx">
+                                                        <asp:ListItem>Mins</asp:ListItem>
+                                                        <asp:ListItem>00</asp:ListItem>
+                                                        <asp:ListItem>05</asp:ListItem>
+                                                        <asp:ListItem>10</asp:ListItem>
+                                                        <asp:ListItem>15</asp:ListItem>
+                                                        <asp:ListItem>20</asp:ListItem>
+                                                        <asp:ListItem>25</asp:ListItem>
+                                                        <asp:ListItem>30</asp:ListItem>
+                                                        <asp:ListItem>35</asp:ListItem>
+                                                        <asp:ListItem>40</asp:ListItem>
+                                                        <asp:ListItem>45</asp:ListItem>
+                                                        <asp:ListItem>50</asp:ListItem>
+                                                        <asp:ListItem>55</asp:ListItem>
+                                                        <asp:ListItem>59</asp:ListItem>
+                                                    </asp:DropDownList></td>
+													</tr>
+													
+													
+													
+													
+													<tr>
+											 <td style="width: 15%; text-align: left;" class="h1">
+                                                Presenter’s Details:
+                                              <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+												</tr>
+												
+												
+												  <tr>
+													<td class="h1" style="width: 15%; height: 20px; text-align: left">
+                                               Presenter:  </td>
+                                            <td style="width: 70%; text-align: left">
+                                                <asp:RadioButtonList ID="rdbEventLoc" runat="server" RepeatDirection="Horizontal"
+                                                    AutoPostBack="True" CssClass="inputbx" OnSelectedIndexChanged="rdbEventLoc_SelectedIndexChanged">
+                                                    <asp:ListItem Value="D" Selected="True"> In-house </asp:ListItem>
+                                                    <asp:ListItem Value="I">External</asp:ListItem>
+													 </asp:RadioButtonList>
+                                                      </td>
+													 
+													  </tr>
+													  
+													  
+													  
+													   <tr>
+                                            <td style="width: 15%; text-align: left;" class="h1">
+                                                 Presenter’s Name:- <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+												
+											<td style="width: 15%; text-align: left;" class="h1">
+                                           Presenter’s email-ID:<span style="color: #ff0000">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+											<asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+											
+											<td style="width: 15%; text-align: left;" class="h1">
+                                           Location: <span style="color: #ff0000">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+											<asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>
+										
+                                              </tr> 
+											 
+											 
+											 <tr>
+                                            <td style="width: 15%; text-align: left;" class="h1">
+                                                 Moderator: <span style="color: red">*</span>
+                                            </td>
+                                            <td style="width: 35%; text-align: left;">
+                                                <asp:TextBox ID="txtTitle" runat="server" CssClass="inputbx" Width="200px" MaxLength="150"></asp:TextBox>		 
+
+												
+												
+												
+												D:\oracle\product\11.2.0\client_1\network\admin	 
+													  
+													  
+													  
+												
+												C:\oraclexe\app\oracle\product\10.2.0\server\NETWORK\ADMIN
+													
+													
+												D:\oracle\product\11.2.0\client_1\network\admin	  
+													  
+													  
+												<tr>
+												
+													  
+													
+												
+
+                                        TNS Location:-      (  D:\oracle\product\11.2.0\client_1\network\admin	)											
+													
+                                                                                               
+                                         Password:-    ED#Hq$t3r9  
+                            
